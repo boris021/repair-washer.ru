@@ -1,0 +1,102 @@
+//====================================================================================================
+.footer {
+	margin-top: 40px;
+	background: #07182E;
+	padding: 34px 0;
+
+	&__container {}
+
+	&__row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	&__left {
+		color: #FFFFFF;
+	}
+
+	&__left-text1 {
+		font-weight: 400;
+		@include adaptiveValue("font-size", 16, 14);
+		line-height: math.div(22, 18);
+
+		@media (max-width:$mobile) {
+			text-align: center;
+		}
+	}
+
+	&__left-text2 {
+		font-weight: 400;
+		@include adaptiveValue("font-size", 16, 14);
+		line-height: math.div(22, 18);
+		margin-bottom: 15px;
+
+		@media (max-width:$mobile) {
+			text-align: center;
+		}
+	}
+
+	&__left-social {
+		display: flex;
+		align-items: center;
+
+		@media (max-width:$mobile) {
+			text-align: center;
+			margin: auto;
+			display: flex;
+			justify-content: center;
+		}
+
+		@media (max-width:$tablet) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__left-wh {
+		margin-right: 15px;
+	}
+
+	&__left-tel {
+		font-weight: 600;
+		@include adaptiveValue("font-size", 30, 22);
+		line-height: math.div(37, 30);
+		color: #FFFFFF;
+	}
+
+	&__right {
+		@media (max-width:$mobile) {
+			display: flex;
+			justify-content: center;
+		}
+	}
+
+	&__right-btn {
+		background: #3A40CB;
+		border-radius: 5px;
+		font-weight: 600;
+		display: flex;
+		align-items: center;
+		text-align: center;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: #FFFFFF;
+		padding: 20px 110px;
+		max-width: 381px;
+		justify-content: center;
+		transition: all 0.3s ease 0s;
+
+		@media (max-width:$mobile) {
+			display: flex;
+			justify-content: center;
+			width: 100%;
+		}
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}
+
+//====================================================================================================

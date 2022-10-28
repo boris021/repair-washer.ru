@@ -1,0 +1,161 @@
+//====================================================================================================
+.main {
+
+	&__container {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	&__left {
+		flex: 0 1 50%;
+
+		@media (max-width:$tablet) {
+			flex: 1 1 100%;
+			margin-top: 40px;
+		}
+	}
+
+	&__left-title {
+		font-weight: 800;
+		@include adaptiveValue("font-size", 40, 30);
+		line-height: math.div(49, 40);
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+		margin-bottom: 15px;
+	}
+
+	&__left-subtitle {
+		font-weight: 600;
+		@include adaptiveValue("font-size", 30, 26);
+		line-height: math.div(37, 30);
+		@include adaptiveValue("margin-bottom", 40, 20);
+	}
+
+	&__left-block {
+		flex-wrap: wrap;
+	}
+
+	&__right {
+		@media (max-width:$tablet) {
+			display: none;
+		}
+	}
+
+	&__right-img {}
+}
+
+.block {
+	background: #FFFFFF;
+	box-shadow: -5px 6px 7px rgba(120, 120, 120, 0.1);
+	border-radius: 6px;
+	padding: 20px;
+
+	&__title {
+		font-weight: 800;
+		font-size: 20px;
+		line-height: math.div(26, 20);
+	}
+
+	&__subtitle {
+		font-weight: 800;
+		font-size: 20px;
+		line-height: math.div(26, 18);
+		text-transform: uppercase;
+		color: $blueColor;
+		margin-bottom: 15px;
+	}
+
+	&__text {
+		font-weight: 800;
+		@include adaptiveValue("font-size", 25, 18);
+		line-height: math.div(31, 25);
+		letter-spacing: 0.025em;
+		color: #3A40CB;
+		margin-bottom: 15px;
+
+		a {
+			color: #434343;
+			margin: 0 8px;
+			font-size: 30px;
+
+			@media (max-width:$tablet) {
+				font-size: 26px;
+				display: block;
+				margin: 6px 0;
+			}
+		}
+	}
+
+	&__form {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	&__form-group {
+		display: flex;
+		align-items: flex-start;
+		flex-direction: column;
+		text-align: left;
+		justify-content: center;
+	}
+
+	&__form-group-text {
+		font-weight: 600;
+		font-size: 16px;
+		@include adaptiveValue("font-size", 16, 14);
+		line-height: math.div(19, 16);
+		color: #434343;
+		margin-bottom: 8px;
+	}
+
+	&__form-group-input {
+		border: 1px solid #AFAFAF;
+		border-radius: 5px;
+		height: 60px;
+		margin-bottom: 9px;
+		min-width: 256px;
+		margin-right: 20px;
+		padding: 10px;
+	}
+
+	&__form-group-title {
+		font-weight: 600;
+		font-size: 12px;
+		color: #434343;
+
+		span {
+			color: #29B6F6;
+		}
+	}
+
+	&__form-btn {
+		display: block;
+		width: 100%;
+		height: 60px;
+		margin-top: 23px;
+		margin-bottom: 8px;
+
+		@media (max-width:$mobile) {
+			width: 100%;
+		}
+	}
+
+	&__form-btn-text {
+		// margin-top: 15px;
+		display: block;
+		font-weight: 600;
+		font-size: 12px;
+		color: #434343;
+
+		a {
+			color: #0CC142;
+		}
+	}
+}
+
+
+
+//====================================================================================================

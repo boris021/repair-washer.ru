@@ -1,0 +1,19 @@
+// Заголовки, общие БЄМ блоки и проче...
+.btn {
+	background: #3A40CB;
+	border-radius: 5px;
+	font-weight: 600;
+	line-height: math.div(30, 14);
+	text-align: center;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	padding: 16px 35px;
+	color: #fff;
+	transition: all 0.3s ease 0s;
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+.input {}

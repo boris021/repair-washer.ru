@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Ремонт Стиральных и посудомоечных машин"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+
+			<section class="main">
+				<div class="main__container">
+					<div class="main__left">
+						<div class="main__left-title">Ремонт Стиральных
+							и посудомоечных машин</div>
+						<div class="main__left-subtitle">По Москве и МО</div>
+						<div class="main__left-block block">
+							<div class="block__title">Решим вашу проблему сегодня</div>
+							<div class="block__subtitle">Выезд мастера ничего не будет стоить для вас</div>
+							<div class="block__text">Позвоните нам<a href="tel:+79652427222">+7 965 242-72-22</a>ИЛИ</div>
+							<form action="sendmail.php" method="POST" class="block__form">
+								<div class="block__form-group">
+									<label for="tel" class="block__form-group-text">Введите телефон</label>
+									<input type="tel" name="tel" id="tel" class="block__form-group-input input tel">
+									<div class="block__form-group-title">Сегодня рассчет получили <span>16 человек</span> </div>
+								</div>
+								<div class="block__form-box">
+									<button type="submit" class="block__form-btn btn">Отправить</button>
+									<div class="block__form-btn-text">Я даю согласие на <a href="#">обработку данных</a></div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="main__right">
+						<div class="main__right-img">
+							<img src="@img/main-1.png" alt="">
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
