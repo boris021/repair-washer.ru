@@ -92,6 +92,13 @@
 		display: flex;
 		align-items: center;
 		flex-wrap: wrap;
+		column-gap: 20px;
+
+		&-box {
+			@media (max-width:$mobile) {
+				width: 100%;
+			}
+		}
 	}
 
 	&__form-group {
@@ -100,6 +107,11 @@
 		flex-direction: column;
 		text-align: left;
 		justify-content: center;
+
+
+		@media (max-width:$mobile) {
+			width: 100%;
+		}
 	}
 
 	&__form-group-text {
@@ -116,9 +128,14 @@
 		border-radius: 5px;
 		height: 60px;
 		margin-bottom: 9px;
-		min-width: 256px;
+		// min-width: 256px;
+		width: 100%;
 		margin-right: 20px;
 		padding: 10px;
+
+		@media (max-width:$mobile) {
+			margin-right: 0;
+		}
 	}
 
 	&__form-group-title {
