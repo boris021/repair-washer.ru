@@ -16,4 +16,14 @@
 	}
 }
 
-.input {}
+.title {
+	text-align: center;
+	font-weight: 800;
+	@include adaptiveValue("font-size", 30, 26);
+	line-height: math.div(37, 30);
+}
+
+.input {
+	border: 1px solid #AFAFAF;
+	border-radius: 5px;
+}
