@@ -11,9 +11,11 @@ body::after {
 	pointer-events: none;
 	z-index: 149;
 }
+
 .popup-show body::after {
 	opacity: 1;
 }
+
 .popup {
 	position: fixed;
 	top: 0;
@@ -25,16 +27,19 @@ body::after {
 	visibility: hidden;
 	pointer-events: none;
 }
+
 .popup_show {
 	z-index: 150;
 	visibility: visible;
 	overflow: auto;
 	pointer-events: auto;
 }
+
 .popup_show .popup__content {
 	visibility: visible;
 	transform: scale(1);
 }
+
 .popup__wrapper {
 	display: flex;
 	flex-direction: column;
@@ -46,16 +51,65 @@ body::after {
 	justify-content: center;
 	align-items: center;
 }
+
 .popup__content {
 	visibility: hidden;
 	transform: scale(0);
 	transition: transform 0.3s ease 0s;
 	background-color: #eee;
-	padding: 20px;
+	padding: 30px;
 	width: 100%;
-	max-width: 900px;
+	max-width: 600px;
 	border-radius: 20px;
+
+	@media (max-width:$mobile) {
+		padding: 20px;
+	}
+
 	.lock & {
 		visibility: visible;
+	}
+}
+
+.popup {
+
+	&__text {
+		text-align: center;
+	}
+
+	&__text-title {
+		font-weight: 700;
+		color: $blueColor;
+		@include adaptiveValue("font-size", 36, 26);
+		margin-bottom: 25px;
+	}
+
+	&__text-subtitle {
+		font-weight: 600;
+		@include adaptiveValue("font-size", 20, 14);
+		line-height: 130%;
+	}
+
+	&__close-btn {
+		background: linear-gradient(90deg, #003976 0%, #0062CA 100%);
+		box-shadow: 10px 10px 47px #004DD5;
+		border-radius: 20px;
+		padding: 15px 30px;
+		font-weight: 500;
+		letter-spacing: 0.5px;
+		font-size: 14px;
+		text-transform: uppercase;
+		color: #fff;
+		transition: all 0.3s ease 0s;
+		text-align: center;
+		display: inline-flex;
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		margin-top: 20px;
+
+		&:hover {
+			opacity: 0.8;
+		}
 	}
 }

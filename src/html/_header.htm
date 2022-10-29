@@ -5,7 +5,7 @@
 				<a href="" class="header__logo"><img src="@img/logo.svg" alt=""></a>
 				<div class="logo__text">Ремонт стиральных машин и ПМ <span>По Москве и МО</span></div>
 			</div>
-			<div data-da=".menu__body, 560, 2" class="header__social">
+			<div class="header__social">
 				<a href="" class="header__link"><img src="@img/whatsapp.svg" alt=""></a>
 				<a href="" class="header__link"><img src="@img/viber.svg" alt=""></a>
 				<a href="" class="header__link"><img src="@img/telegram.svg" alt=""></a>
@@ -19,16 +19,17 @@
 				<div class="header__clock-text">заявки принимаюстся</div>
 				<div class="header__clock-subtext">с 9:00 - 00:00</div>
 			</div>
-			<a href="" class="header__btn btn">Консультация</a>
+			<a href="#" data-goto=".problem" class="header__btn btn">Консультация</a>
 		</div>
-		<div data-da=".header__row, 444, 2" class="header__menu menu">
+		<div data-da=".header__row, 768, 2" class="header__menu menu">
 			<button type="button" class="menu__icon icon-menu"><span></span></button>
 			<nav class="menu__body">
 				<ul class="menu__list">
-					<li class="menu__item"><a href="" class="menu__link">Бесплатный выезд мастера</a></li>
-					<li class="menu__item"><a href="" class="menu__link">примеры работ</a></li>
-					<li class="menu__item"><a href="" class="menu__link">отзывы</a></li>
-					<li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
+					<li class="menu__item"><a data-goto=".example" href="#" class="menu__link">примеры работ</a></li>
+					<li class="menu__item"><a data-goto=".testimonial" href="#" class="menu__link">отзывы</a></li>
+					<li class="menu__item"><a data-goto=".sales" href="#" class="menu__link">Бесплатный выезд мастера</a>
+					</li>
+					<li class="menu__item"><a data-goto=".contact" href="#" class="menu__link">Контакты</a></li>
 				</ul>
 			</nav>
 		</div>

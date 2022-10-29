@@ -54,7 +54,7 @@ body {
 
 	// Скролл заблокирован
 	.lock & {
-		// overflow: hidden;
+		overflow: hidden;
 		touch-action: none;
 	}
 }

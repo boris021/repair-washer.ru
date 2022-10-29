@@ -342,6 +342,7 @@
 		@media (max-width:$tablet) {
 			flex: 1 1 100%;
 			justify-content: center;
+			z-index: 1;
 		}
 	}
 }
@@ -409,7 +410,7 @@
 
 	&__container {
 		position: relative;
-		// padding: 80px;
+		z-index: -1;
 
 		&::before {
 			content: '';
@@ -452,6 +453,7 @@
 		padding: 46px 37px;
 		width: 478px;
 		margin: 80px;
+		z-index: -1;
 
 		@media (max-width:$tablet) {
 			margin: 40px;
@@ -499,9 +501,12 @@
 
 // auto ========================================================================================================================================================
 .auto {
+	@include adaptiveValue("padding-top", 80, 40);
+	display: block;
 	@include adaptiveValue("margin-bottom", 50, 20);
 
 	&__title {
+
 		@include adaptiveValue("margin-bottom", 40, 20);
 	}
 
@@ -625,5 +630,684 @@
 			height: 100%;
 			object-fit: cover;
 		}
+	}
+}
+
+// sales ========================================================================================================================================================
+.sales {
+	position: relative;
+	@include adaptiveValue("margin-top", 60, 30);
+	@include adaptiveValue("margin-bottom", 70, 30);
+	@include adaptiveValue("padding-top", 155, 40);
+	@include adaptiveValue("padding-bottom", 155, 40);
+
+	&__bg {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: url(../img/sales-bg.jpg) center center no-repeat;
+		z-index: -1;
+	}
+
+	&__container {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	&__left {
+		flex: 0 1 50%;
+
+		@media (max-width:$tablet) {
+			flex: 1 1 100%;
+			margin-bottom: 40px;
+			z-index: -1;
+		}
+	}
+
+	&__left-subtitle {
+		font-weight: 800;
+		@include adaptiveValue("font-size", 20, 18);
+		line-height: math.div(30, 20);
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+
+		span {
+			text-transform: lowercase
+		}
+	}
+
+	&__left-title {
+		font-weight: 800;
+		@include adaptiveValue("font-size", 20, 18);
+		line-height: math.div(30, 20);
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+		color: #3A40CB;
+	}
+
+	&__left-text {
+		font-weight: 800;
+		@include adaptiveValue("font-size", 20, 18);
+		line-height: math.div(30, 20);
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+	}
+
+	&__left-box {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__right {
+		flex: 0 1 50%;
+		justify-content: flex-end;
+		display: flex;
+
+		@media (max-width:$tablet) {
+			flex: 1 1 100%;
+			justify-content: center;
+			z-index: -1;
+		}
+	}
+
+	&__right-form {
+		background: #FFFFFF;
+		box-shadow: -5px 6px 7px rgba(120, 120, 120, 0.1);
+		border-radius: 6px;
+		padding: 30px 25px;
+		max-width: 410px;
+	}
+
+	&__form-title {
+		font-weight: 800;
+		font-size: 20px;
+		line-height: 25px;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	&__forms-group {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__forms-label {
+		margin-bottom: 10px;
+		font-weight: 600;
+		@include adaptiveValue("font-size", 16, 14);
+		line-height: math.div(19, 16);
+	}
+
+	&__forms-input {
+		height: rem(66);
+		margin-bottom: 18px;
+		padding: 20px;
+	}
+
+	&__forms-btn {
+		display: inline-flex;
+		width: 100%;
+		justify-content: center;
+		margin-bottom: 6px;
+	}
+
+	&__forms-text {
+		font-weight: 600;
+		font-size: 12px;
+		margin-bottom: 18px;
+
+		span {
+			color: #0CC142;
+		}
+	}
+
+	&__right-box {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
+.box {
+	margin-top: 40px;
+
+	&__item {
+		display: flex;
+		align-items: center;
+		max-width: 250px;
+
+		@media (max-width:$tablet) {}
+
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__item-img {
+		margin-right: 13px;
+		width: 25px;
+		height: 25px;
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__item-text {
+		font-weight: 600;
+		@include adaptiveValue("font-size", 16, 14);
+		line-height: math.div(20, 16);
+	}
+}
+
+.right {
+
+	&__box {
+		margin-bottom: 10px;
+	}
+
+	&__box-phone {}
+
+	&__box-socilal {}
+}
+
+.box-phone {
+
+	&__text {
+		font-weight: 800;
+		font-size: 14px;
+		letter-spacing: 0.02em;
+		margin-bottom: 4px;
+	}
+
+	&__tel {
+		font-weight: 600;
+		font-size: 19px;
+		transition: all 0.3s ease 0s;
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}
+
+.box-socilal {
+
+	&__text {
+		font-weight: 800;
+		font-size: 14px;
+		letter-spacing: 0.02em;
+		margin-bottom: 4px;
+	}
+
+	a {
+		width: 30px;
+		height: 30px;
+		margin-right: 8px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		img {
+			max-width: 100%;
+		}
+	}
+}
+
+.right-content {
+	display: flex;
+	align-items: center;
+	// justify-content: space-between;
+
+	&__text {
+		flex: 0 1 40%;
+		font-weight: 800;
+		font-size: 12px;
+		line-height: math.div(15, 12);
+		letter-spacing: 0.02em;
+		margin-right: 20px;
+	}
+
+	&__clock {
+		font-weight: 600;
+		font-size: 14px;
+		line-height: math.div(17, 14);
+		color: #3A40CB;
+	}
+}
+
+// testimonial ========================================================================================================================================================
+.testimonial {
+
+	&__container {}
+
+	&__title {
+		margin-bottom: 5px;
+	}
+
+	&__subtitle {
+		font-weight: 500;
+		@include adaptiveValue("font-size", 20, 18);
+		line-height: math.div(24, 20);
+		@include adaptiveValue("margin-bottom", 40, 20);
+		text-align: center;
+	}
+
+	&__slider {
+
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__wrapper {}
+
+	&__slide {}
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+	width: 43px !important;
+	background: #F1F1F1;
+	border-radius: 50%;
+
+	@media (max-width:$mobile) {
+		display: none !important;
+	}
+
+	&::after {
+		font-size: 14px !important;
+		color: #1A3565;
+		font-weight: 800;
+	}
+}
+
+//========================================================================================================================================================
+.example {
+	@include adaptiveValue("margin-top", 60, 30);
+	@include adaptiveValue("margin-bottom", 70, 30);
+
+	&__container {}
+
+	&__title {
+		@include adaptiveValue("margin-bottom", 40, 20);
+	}
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 30px;
+	}
+
+	&__item {
+		flex: 0 1 30%;
+
+		@media (max-width:$tablet) {
+			flex: 0 1 45%;
+			justify-content: center;
+		}
+
+		@media (max-width:$mobile) {
+			flex: 1 1 100%;
+		}
+	}
+
+	&__item-img {
+		max-width: 381px;
+		height: 255px;
+		border-radius: 6px;
+		margin-bottom: 10px;
+
+		img {
+			width: 100%;
+			height: 100%;
+			border-radius: 6px;
+			object-fit: cover;
+		}
+	}
+
+	&__item-title {
+		font-weight: 800;
+		@include adaptiveValue("font-size", 18, 16);
+		line-height: math.div(25, 20);
+		text-align: left;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		color: #3A40CB;
+	}
+}
+
+.example {
+
+
+	&__call {
+		margin-top: 40px;
+		padding: 24px 46px 40px 46px;
+		background: #FFFFFF;
+		border: 3px solid #3A40CB;
+		box-shadow: -5px 6px 7px rgba(120, 120, 120, 0.1);
+		border-radius: 6px;
+	}
+}
+
+.call {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	&__left {
+		font-weight: 800;
+		@include adaptiveValue("font-size", 20, 18);
+		line-height: 128.5%;
+
+		@media (max-width:$tablet) {
+			flex: 1 1 100%;
+			text-align: center;
+		}
+	}
+
+	&__title {
+		color: #3A40CB;
+		margin-bottom: 8px;
+		text-transform: uppercase;
+	}
+
+	&__phone {
+		color: #3A40CB;
+		@include adaptiveValue("font-size", 26, 22);
+	}
+
+	&__center {
+		@media (max-width:$tablet) {
+			flex: 1 1 100%;
+			text-align: center;
+		}
+	}
+
+	&__center-text {
+		font-weight: 800;
+		@include adaptiveValue("font-size", 40, 20);
+		line-height: math.div(49, 40);
+	}
+}
+
+.probmlem {
+
+	&__from {
+		@media (max-width:$tablet) {
+			flex: 1 1 100%;
+			text-align: center;
+		}
+	}
+}
+
+//========================================================================================================================================================
+.repair {
+	@include adaptiveValue("margin-top", 60, 30);
+	@include adaptiveValue("margin-bottom", 70, 30);
+
+	&__container {}
+
+	&__title {
+		@include adaptiveValue("margin-bottom", 40, 20);
+	}
+
+	&__row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		flex: 0 1 30%;
+		margin-bottom: 25px;
+
+		@media (max-width:$tablet) {
+			flex: 0 1 45%;
+			justify-content: center;
+		}
+
+		@media (max-width:$mobile) {
+			flex: 1 1 100%;
+		}
+	}
+
+	&__item-title {
+		margin-bottom: 30px;
+		font-weight: 800;
+		@include adaptiveValue("font-size", 20, 16);
+		line-height: math.div(25, 20);
+		text-align: center;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		color: #3A40CB;
+
+		@media (max-width:$tablet) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__item-img {
+		max-width: 330px;
+		height: 240px;
+		margin: 0 auto;
+
+		img {
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+//========================================================================================================================================================
+.contact {
+	@include adaptiveValue("margin-top", 60, 30);
+
+	&__container {}
+
+	&__title {
+		@include adaptiveValue("margin-bottom", 40, 20);
+	}
+
+	&__row {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	&__left {
+		text-align: center;
+		flex: 0 1 35%;
+		background: #FFFFFF;
+		padding: 30px;
+		box-shadow: -5px 6px 7px rgba(120, 120, 120, 0.1);
+		border-radius: 6px;
+
+		@media (max-width:$mobile) {
+			flex: 1 1 100%;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__left-title {
+		font-weight: 800;
+		@include adaptiveValue("font-size", 20, 18);
+		line-height: math.div(25, 20);
+		text-align: center;
+		margin-bottom: 15px;
+	}
+
+	&__left-subtitle {
+		font-weight: 500;
+		@include adaptiveValue("font-size", 16, 14);
+		line-height: math.div(19, 16);
+		margin-bottom: 20px;
+	}
+
+	&__left-social {
+		display: flex;
+		justify-content: center;
+		column-gap: 30px;
+		min-width: 44px;
+		height: 44px;
+		margin-bottom: 20px;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__left-link {}
+
+	&__left-call {
+		margin-bottom: 20px;
+		font-weight: 800;
+		@include adaptiveValue("font-size", 20, 16);
+	}
+
+	&__left-form {}
+
+	&__left-forms {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__right {
+		flex: 0 1 60%;
+		position: relative;
+
+		@media (max-width:$mobile) {
+			flex: 1 1 100%;
+		}
+	}
+
+	&__right-map {}
+
+	&__right-content {
+		margin: 30px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		background: #FFFFFF;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		border-radius: 6px;
+		padding: 33px;
+	}
+}
+
+.left-forms {
+
+	&__tel {
+		margin-bottom: 15px;
+		height: rem(60);
+		padding: 20px;
+	}
+
+	&__btn {
+		margin-bottom: 10px;
+	}
+
+	&__text {
+		font-weight: 600;
+		font-size: 12px;
+
+		span {
+			color: #0CC142;
+		}
+	}
+}
+
+.right-content {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+
+	&__title {
+		margin-bottom: 15px;
+		font-weight: 800;
+		@include adaptiveValue("font-size", 20, 18);
+		line-height: math.div(25, 20);
+	}
+
+	&__box {
+		display: flex;
+		align-items: center;
+		margin-bottom: 10px;
+
+		img {
+			margin-right: 15px;
+		}
+	}
+
+	&__card {}
+
+	&__row {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	&__row-text {
+		margin-right: 10px;
+		font-weight: 800;
+		font-size: 12px;
+		letter-spacing: 0.02em;
+
+		@media (max-width:$mobile) {
+			margin-bottom: 5px;
+			margin-top: 10px;
+		}
+	}
+
+	&__row-title {
+		font-weight: 600;
+		font-size: 14px;
+		line-height: math.div(20, 14);
+		color: #3A40CB;
+
+	}
+}
+
+.content {
+
+	&__card-text {
+		font-weight: 800;
+		font-size: 14px;
+		letter-spacing: 0.02em;
+		margin-bottom: 5px;
+	}
+
+	&__card-link {
+		font-weight: 600;
+		font-size: 20px;
+		line-height: math.div(25, 20);
+		transition: all 0.3s ease 0s;
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}
+
+// testimonial ========================================================================================================================================================
+.testimonial {
+
+	&__subtitle {
+		font-weight: 500;
+		@include adaptiveValue("font-size", 20, 18);
+		line-height: math.div(24, 20);
 	}
 }

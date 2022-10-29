@@ -9,6 +9,12 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+
+		@media (max-width:$mobile) {
+			// position: fixed;
+			// width: 100%;
+
+		}
 	}
 
 	&__logo {
@@ -25,10 +31,23 @@
 		display: flex;
 		align-items: center;
 		column-gap: 12px;
-		width: 30px;
+		min-width: 30px;
 		height: 30px;
 		margin-right: 40px;
 		transition: all 0.3s ease 0s;
+		z-index: 99999999;
+		position: relative;
+
+		img {
+			width: 100%;
+		}
+
+		@media (max-width:$mobile) {
+			flex: 1 1 auto;
+			margin: 0 15px;
+			display: flex;
+			justify-content: center;
+		}
 
 		&:hover {
 			opacity: 0.8;
@@ -48,7 +67,16 @@
 		}
 	}
 
-	&__phone-link {}
+	&__phone-link {
+		@media (max-width:$mobile) {
+			font-size: 26px;
+			text-align: center;
+			color: #fff;
+			font-weight: 600;
+			display: flex;
+			justify-content: center;
+		}
+	}
 
 	&__clock {
 		font-size: 14px;
@@ -92,6 +120,7 @@
 .logotip {
 	display: flex;
 	align-items: center;
+	z-index: 10;
 }
 
 .logo {
@@ -102,7 +131,7 @@
 		line-height: math.div(17, 14);
 		letter-spacing: 0.02em;
 
-		@media (max-width: em(448)) {
+		@media (max-width:$mobile) {
 			display: none;
 		}
 
@@ -122,8 +151,6 @@
 	@media (max-width:$mobile) {
 		margin-top: 0;
 	}
-
-	&__icon {}
 
 	&__body {
 
@@ -146,14 +173,13 @@
 
 			&::before {
 				content: '';
-				position: absolute;
 				// position: fixed;
 				height: 70px;
 				width: 100%;
 				top: 0px;
 				left: 0;
-				z-index: 5;
-				// background: rgba(255, 255, 255, 0.238);
+				z-index: 999;
+				background: #fff;
 			}
 		}
 	}
@@ -193,6 +219,8 @@
 
 	}
 }
+
+
 
 //====================================================================================================
 

@@ -21,7 +21,7 @@
 						<a href="" class="header__logo"><img src="img/logo.svg" alt=""></a>
 						<div class="logo__text">Ремонт стиральных машин и ПМ <span>По Москве и МО</span></div>
 					</div>
-					<div data-da=".menu__body, 560, 2" class="header__social">
+					<div class="header__social">
 						<a href="" class="header__link"><img src="img/whatsapp.svg" alt=""></a>
 						<a href="" class="header__link"><img src="img/viber.svg" alt=""></a>
 						<a href="" class="header__link"><img src="img/telegram.svg" alt=""></a>
@@ -35,16 +35,17 @@
 						<div class="header__clock-text">заявки принимаюстся</div>
 						<div class="header__clock-subtext">с 9:00 - 00:00</div>
 					</div>
-					<a href="" class="header__btn btn">Консультация</a>
+					<a href="#" data-goto=".problem" class="header__btn btn">Консультация</a>
 				</div>
-				<div data-da=".header__row, 444, 2" class="header__menu menu">
+				<div data-da=".header__row, 768, 2" class="header__menu menu">
 					<button type="button" class="menu__icon icon-menu"><span></span></button>
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li class="menu__item"><a href="" class="menu__link">Бесплатный выезд мастера</a></li>
-							<li class="menu__item"><a href="" class="menu__link">примеры работ</a></li>
-							<li class="menu__item"><a href="" class="menu__link">отзывы</a></li>
-							<li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
+							<li class="menu__item"><a data-goto=".example" href="#" class="menu__link">примеры работ</a></li>
+							<li class="menu__item"><a data-goto=".testimonial" href="#" class="menu__link">отзывы</a></li>
+							<li class="menu__item"><a data-goto=".sales" href="#" class="menu__link">Бесплатный выезд мастера</a>
+							</li>
+							<li class="menu__item"><a data-goto=".contact" href="#" class="menu__link">Контакты</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -62,7 +63,7 @@
 							<div class="block__title">Решим вашу проблему сегодня</div>
 							<div class="block__subtitle">Выезд мастера ничего не будет стоить для вас</div>
 							<div class="block__text">Позвоните нам<a href="tel:+79652427222">+7 965 242-72-22</a>ИЛИ</div>
-							<form action="sendmail.php" method="POST" class="block__form">
+							<form data-dev data-popup-message="#form-message" action="sendmail.php" method="POST" class="block__form">
 								<div class="block__form-group">
 									<label for="tel" class="block__form-group-text">Введите телефон</label>
 									<input type="tel" name="tel" id="tel" class="block__form-group-input input tel">
@@ -328,6 +329,241 @@
 				</div>
 			</section>
 
+			<section class="sales">
+				<div class="sales__bg">
+					<img src="img/sales-bg.jpg" alt="sales">
+				</div>
+				<div class="sales__container">
+					<div class="sales__left">
+						<div class="sales__left-subtitle">Сообщите о своей проблеме <span> и получите</span></div>
+						<div class="sales__left-title">скидку 5% + 1 ГОД СЕРВИСНОГО</div>
+						<div class="sales__left-text">ОБСЛУЖИВАНИЯ ПРИ ЗАКАЗЕ С САЙТА</div>
+						<div class="sales__left-box box">
+							<div class="box__item">
+								<div class="box__item-img"><img src="img/circle.svg" alt=""></div>
+								<div class="box__item-text">Мастер приедет вовремя,
+									в удобное для Вас время</div>
+							</div>
+							<div class="box__item">
+								<div class="box__item-img"><img src="img/circle.svg" alt=""></div>
+								<div class="box__item-text">Сделает детальный осмотр,
+									озвучит проблему и решения</div>
+							</div>
+							<div class="box__item">
+								<div class="box__item-img"><img src="img/circle.svg" alt=""></div>
+								<div class="box__item-text">Озвучит стоимость и
+									сроки выполнения работ</div>
+							</div>
+							<div class="box__item">
+								<div class="box__item-img"><img src="img/circle.svg" alt=""></div>
+								<div class="box__item-text">Может сразу же
+									приступить к ремонту</div>
+							</div>
+						</div>
+					</div>
+					<div class="sales__right">
+						<div class="sales__right-form">
+							<div class="sales__form-title">Оставьте заявку, мы перезвоним вам через 15 минут</div>
+							<form data-dev data-popup-message="#form-message" action="sendmail.php" method="post" class="sales__right-forms sales__forms">
+								<div class="sales__forms-group">
+									<label for="tel" class="sales__forms-label">Введите телефон</label>
+									<input type="tel" name="tel" id="" class="input sales__forms-input tel">
+								</div>
+								<button type="submit" class="sales__forms-btn btn">Вызвать мастера</button>
+								<div class="sales__forms-text">Я даю согласие <span>обработку данных</span></div>
+							</form>
+							<div class="sales__right-box right__box">
+								<div class="right__box-phone box-phone">
+									<div class="box-phone__text">Звоните!</div>
+									<a href="tel:+79652427222" class="box-phone__tel">+7 965 242-72-22</a>
+								</div>
+								<div class="right__box-socilal box-socilal">
+									<div class="box-socilal__text">Пишите!</div>
+									<a href="#" class="box-phone__tel"><img src="img/whatsapp.svg" alt=""></a>
+									<a href="#" class="box-phone__tel"><img src="img/viber.svg" alt=""></a>
+									<a href="#" class="box-phone__tel"><img src="img/telegram.svg" alt=""></a>
+								</div>
+							</div>
+							<div class="sales__right-content right-content">
+								<div class="right-content__text">Работаем без выходных</div>
+								<div class="right-content__clock">Заявки принимаем <br>
+									с 9:00 - 00:00</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="testimonial">
+				<div class="testimonial__container">
+					<div class="testimonial__title title">За 7 лет работы нам доверилось более 7890 людей</div>
+					<div class="testimonial__subtitle">Не навязываем лишние услуги, выполняем то, что необходимо</div>
+					<!-- Оболочка слайдера -->
+					<div class="testimonial__slider swiper">
+						<!-- Двигающееся часть слайдера -->
+						<div class="testimonial__wrapper swiper-wrapper">
+							<!-- Слайд -->
+							<div class="testimonial__slide swiper-slide">
+								<img src="img/testimional/ot01.png" alt="">
+							</div>
+							<div class="testimonial__slide swiper-slide">
+								<img src="img/testimional/ot01.png" alt="">
+							</div>
+							<div class="testimonial__slide swiper-slide">
+								<img src="img/testimional/ot01.png" alt="">
+							</div>
+							<div class="testimonial__slide swiper-slide">
+								<img src="img/testimional/ot01.png" alt="">
+							</div>
+						</div>
+						<!-- Если нужна навигация (влево/вправо) -->
+						<button type="button" class="swiper-button-prev"></button>
+						<button type="button" class="swiper-button-next"></button>
+					</div>
+				</div>
+			</section>
+
+			<section class="example">
+				<div class="example__container">
+					<div class="example__title title">Примеры выполненных работ</div>
+					<div class="example__row">
+						<div class="example__item">
+							<div class="example__item-img">
+								<img src="img/expal/ex1.jpg" alt="example">
+							</div>
+							<div class="example__item-title">замена блока управления</div>
+						</div>
+						<div class="example__item">
+							<div class="example__item-img">
+								<img src="img/expal/ex2.jpg" alt="example">
+							</div>
+							<div class="example__item-title">замена манжеты</div>
+						</div>
+						<div class="example__item">
+							<div class="example__item-img">
+								<img src="img/expal/ex3.jpg" alt="example">
+							</div>
+							<div class="example__item-title">замена подшибника</div>
+						</div>
+						<div class="example__item">
+							<div class="example__item-img">
+								<img src="img/expal/ex4.jpg" alt="example">
+							</div>
+							<div class="example__item-title">Ремонт пОСУДОМОЕЧНОЙ мАШИНы</div>
+						</div>
+						<div class="example__item">
+							<div class="example__item-img">
+								<img src="img/expal/ex5.jpg" alt="example">
+							</div>
+							<div class="example__item-title">замена бака</div>
+						</div>
+						<div class="example__item">
+							<div class="example__item-img">
+								<img src="img/expal/ex6.jpg" alt="example">
+							</div>
+							<div class="example__item-title">Замена двигателя</div>
+						</div>
+					</div>
+					<div class="example__call call">
+						<div class="call__left">
+							<div class="call__subtitle">Не нашли нужную услугу?</div>
+							<div class="call__title">Перезвоните нам:</div>
+							<a href="tel:+79652427222" class="call__phone">+7 965 242-72-22</a>
+						</div>
+						<div class="call__center">
+							<div class="call__center-text">или</div>
+						</div>
+						<form action="senmail.php" method="post" class="probmlem__from">
+							<div class="probmlem__from-group">
+								<label for="tel" class="probmlem__from-label">Введите телефон</label>
+								<input type="tel" name="tel" id="tel" class="probmlem__from-tel input tel">
+							</div>
+							<div class="probmlem__from-card">
+								<button type="submit" class="probmlem__from-btn btn">Отправить</button>
+								<div class="probmlem__from-text">Я даю согласие на <span>обработку данных</span></div>
+							</div>
+						</form>
+
+					</div>
+				</div>
+			</section>
+
+			<section class="repair">
+				<div class="repair__container">
+					<div class="repair__title title">Ремонтируем все виды стиральных машин</div>
+					<div class="repair__row">
+						<div class="repair__item">
+							<div class="repair__item-title">Ремонт стиральных
+								машин автомат</div>
+							<div class="repair__item-img">
+								<img src="img/expal/repair01.png" alt="">
+							</div>
+						</div>
+						<div class="repair__item">
+							<div class="repair__item-title">Ремонт стиральных машин
+								с вертикальной загрузкой</div>
+							<div class="repair__item-img">
+								<img src="img/expal/repair02.png" alt="">
+							</div>
+						</div>
+						<div class="repair__item">
+							<div class="repair__item-title">Ремонт стиральных
+								машин полуавтомат </div>
+							<div class="repair__item-img">
+								<img src="img/expal/repair03.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="contact">
+				<div class="contact__container">
+					<div class="contact__title title">Наши контакты</div>
+					<div class="contact__row">
+						<div class="contact__left">
+							<div class="contact__left-title">Остались вопросы? <br> Задайте нам любой вопрос!</div>
+							<div class="contact__left-subtitle">Напишите нам в удобный мессенджер:</div>
+							<div class="contact__left-social">
+								<a href="" class="contact__left-link"><img src="img/whatsapp.svg" alt=""></a>
+								<a href="" class="contact__left-link"><img src="img/viber.svg" alt=""></a>
+								<a href="" class="contact__left-link"><img src="img/telegram.svg" alt=""></a>
+							</div>
+							<div class="contact__left-call">Или оставьте заявку на звонок:</div>
+							<div class="contact__left-form">
+								<form data-dev data-popup-message="#form-message" action="sendmail.php" method="post" class="contact__left-forms">
+									<input type="tel" name="tel" id="tel" class="left-forms__tel input tel">
+									<button type="submit" class="left-forms__btn btn">Перезвоните мне</button>
+									<div class="left-forms__text">Я даю согласие на <span>обработку данных</span></div>
+								</form>
+							</div>
+						</div>
+						<div class="contact__right">
+							<div class="contact__right-map">
+								<div style="position:relative;overflow:hidden;"><a href="https://yandex.kz/maps/213/moscow/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Москва</a><a href="https://yandex.kz/maps/geo/moskva/53000094/?ll=37.629605%2C55.751784&utm_medium=mapframe&utm_source=maps&z=13.99" style="color:#eee;font-size:12px;position:absolute;top:14px;">Москва —
+										Яндекс Карты</a><iframe src="https://yandex.kz/map-widget/v1/-/CCUZvLW1KA" width="100%" height="600" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+								</div>
+							</div>
+							<div class="contact__right-content right-content">
+								<div class="right-content__title">Звоните прямо сейчас:</div>
+								<div class="right-content__box">
+									<img src="img/whatsapp.svg" alt="">
+									<div class="right-content__card">
+										<div class="content__card-text">Звоните!</div>
+										<a href="tel:+79652427222" class="content__card-link">+7 965 242-72-22</a>
+									</div>
+								</div>
+								<div class="right-content__row">
+									<div class="right-content__row-text">Работаем без выходных</div>
+									<div class="right-content__row-title">Заявки принимаем <br>
+										с 9:00 - 00:00</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
 
 		</main>
 		<footer class="footer">
@@ -342,24 +578,24 @@
 						</div>
 					</div>
 					<div class="footer__right">
-						<a href="" class="footer__right-btn">Заказать звонок</a>
+						<a href="#" data-goto=".example__call" class="footer__right-btn">Заказать звонок</a>
 					</div>
 				</div>
 			</div>
 		</footer>
 	</div>
-	<!-- 
-<div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
+	<div id="form-message" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__text">
+					<div class="popup__text-title">Спасибо за вашу заявку!</div>
+					<div class="popup__text-subtitle">В ближайшие время с вами свяжется специалист компании,
+						который проконсультирует вас по всем вопросам.</div>
+				</div>
+				<button data-close type="button" class="popup__close-btn">Закрыть</button>
 			</div>
 		</div>
 	</div>
-</div>
- -->
-
 	<script src="js/app.min.js"></script>
 
 	<script>
